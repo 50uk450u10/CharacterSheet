@@ -11,7 +11,7 @@ public class CharacterSheet : MonoBehaviour
     [SerializeField] bool finesse;
     [SerializeField][Range(-5, 5)] int str = 0;
     [SerializeField][Range(-5, 5)] int dex = 0;
-    int enemyAC = Random.Range(1, 21);
+    
 
     int RollD20() //D20 function set
     {
@@ -22,6 +22,7 @@ public class CharacterSheet : MonoBehaviour
     {
 
         int roll = RollD20();
+        int enemyAC = Random.Range(1, 21);
 
         //Hit modifier logic
         int hitMod;
